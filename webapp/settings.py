@@ -29,9 +29,9 @@ django_heroku.settings(locals())
 SECRET_KEY = 't_g!q0+my&_)z9id+ppgb9va!5#1nmprpx5(^)1_l(!$5#g@7u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['sbuilt.herokuapp.com','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['sbuilt.herokuapp.com','127.0.0.1']
 
 
 # Application definition
