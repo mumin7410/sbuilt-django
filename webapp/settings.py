@@ -17,7 +17,8 @@ import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+import django_heroku
+django_heroku.settings(locals())
 
 
 # Quick-start development settings - unsuitable for production
@@ -29,7 +30,7 @@ SECRET_KEY = 't_g!q0+my&_)z9id+ppgb9va!5#1nmprpx5(^)1_l(!$5#g@7u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['sbuilt.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -58,7 +59,7 @@ MIDDLEWARE = [
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 ROOT_URLCONF = 'webapp.urls'
 
@@ -95,7 +96,7 @@ DATABASES = {
     }
 }
 
-DATABASES['default'] = dj_database_url.config(default='postgres://klirvpjawhzqad:ace42fe05355bc9278db2e71fbd1e6204266ec711ac5bf72d12756d66192ede5@ec2-54-224-124-241.compute-1.amazonaws.com:5432/d1r8ieaatdebir')
+
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -135,7 +136,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR ,"template/static")
 ]
