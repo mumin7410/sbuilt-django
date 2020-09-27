@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ['https://polar-thicket-83394.herokuapp.com/']
 
 
 # Application definition
-django_heroku.settings(locals())
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
