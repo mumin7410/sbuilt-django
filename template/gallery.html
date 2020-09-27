@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Minstone</title>
+        <link rel="stylesheet" href="{% static '/CSS/style.css' %}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href = https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css>
+    </head>
+<body>
+    
+        <!--Before Navbar-->
+        <div id="before-navbar">
+            <p>Sale Promotion</p>
+        </div>
+        <!--Navbar-->
+        <nav class="navbar" id="navbar">
+            <div class = "logo" id="logo"><a href="{% url 'index' %}"><h1>Sbuilt</h1></a></div>
+            </button>
+            <div class="menu">
+            <div id="nav-ul" class="nav-ul">
+                <a href="{% url 'price' %}"><div class="li">price</div></a>
+                <a href="{% url 'gallery' %}"><div class="li">gallery</div></a>
+                <a href="{% url 'index' %}"><div class="li">contact</div></a>
+            </div>
+            <button class = "toggle"  id="toggle"><i class="fa fa-bars"  style="font-size:33px"></i></button>
+            </div>       
+        </nav>
+        <div class="dropdown" id="dropdown">
+            <a href="{% url 'price' %}"><div class="li-drop">price</div></a>
+            <a href="{% url 'gallery' %} "><div class="li-drop">gallery</div></a>
+            <a href="{% url 'index' %}"><div class="li-drop">contact</div></a>
+        </div>
+
+
+    <div class="gallery">
+        {% for image in imgs %}
+        <div class="img" data-aos="fade-up">
+            <img src="{{image.img.url}}" alt="">
+        </div>
+        {% endfor %}
+    </div>
+    <!--Script-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        window.addEventListener("scroll",function(){
+        let header = document.getElementById("navbar");
+        if(window.scrollY > 40){
+        header.classList.add("cus-nav");
+
+        }else{
+        header.classList.remove("cus-nav");
+        }
+        });
+    </script>
+    <script>
+        const toogle = document.getElementById('toggle');
+        const dropdown = document.getElementById('dropdown');
+
+        toggle.addEventListener('click',()=>{
+        dropdown.classList.toggle('show_1');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minstone</title>
+    <link rel="stylesheet" href="{% static '/CSS/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href = https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css>
+    
+</head>
+<body>
+    <div id="header">
+        <!--Before Navbar-->
+        <div id="before-navbar">
+            <p>Sale Promotion</p>
+        </div>
+        <!--Navbar-->
+        <nav class="navbar" id="navbar">
+            <div class = "logo" id="logo"><a href="{% url 'index' %}"><h1>Sbuilt</h1></a></div>
+            </button>
+            <div class="menu">
+            <div id="nav-ul" class="nav-ul">
+                <a href="#content1"><div class="li">price</div></a>
+                <a href="#product"><div class="li">gallery</div></a>
+                <a href="#contact"><div class="li">contact</div></a>
+            </div>
+            <button class = "toggle"  id="toggle"><i class="fa fa-bars"  style="font-size:33px"></i></button>
+            </div>       
+        </nav>
+        <div class="dropdown" id="dropdown">
+            <a href="#content1"><div class="li-drop">price</div></a>
+            <a href="#product"><div class="li-drop">gallery</div></a>
+            <a href="#contact"><div class="li-drop">contact</div></a>
+        </div>
+        <div id="home">
+            <h1>HOME IS LIFE</h1>
+            <p>Dream House</p>
+        </div>
+    </div>
+    <!--content0-->
+    <div id="advertise"  data-aos="fade-up">
+        <h1>Brightening homes with <br>
+            Furniture, minimal products.</h1>
+    </div>
+    <!--content1-2-->
+    <section class="price-1">
+    <div id="content1"  data-aos="fade-up">
+        <div id="inner-item">
+            <div id="text">
+                <h1>kitchen</h1> 
+                <p>low space good design</p>
+            </div>
+            <a href="{% url 'price' %}"><button class="btn" >See Price</button></a>
+        </div>
+        <div>
+        <div id="img">
+            <img src="https://media.improvenet.craftjack.io/media/Default/_Profiles/2e3686cd/df9c170a/How%20To%20Create%20A%20Minimalist%20Kitchen.jpg" alt="">
+        </div>
+    </div>
+    </div>
+    </section>
+    <div id="content2" data-aos="fade-up">
+        <div id="img">
+            <img src="https://img5.goodfon.com/wallpaper/nbig/9/98/gostinaia-mebel-divan-komnata-modern-luxury-living-room-inte.jpg" alt="">
+        </div>
+        <div id="inner-item2">
+            <div id="text">
+                <h1>living room</h1> 
+                <p>low space good design</p>
+            </div>
+            <a href="{% url 'price' %}"><button class="btn" >See Price</button></a>
+        </div>
+    </div>
+    <!--about-->
+    <section class="about">
+    <div id="About" >
+        <div id="about" data-aos="fade-up"><h2>Experience more than <br>10 years</h2></div>
+        <div id="star" data-aos="fade-up"><h2>★★★★★<br>Five star from review</h2></div>
+        <div id="skill" data-aos="fade-up"><h2>24/7<br> Support</h2></div>
+    </div>
+    </section>
+    <!--Product-->
+    <section class="product">
+    <div id="product">
+            <div id="kitchen"  data-aos="fade-up">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/1606/1606657.svg" alt="">
+            <h2>kitchen</h2>
+            <a href="{% url 'gallery' %}"><button class="btn" >Gallery</button></a>
+            </div>
+
+        <div id="livingroom"  data-aos="fade-up">
+            <img src="https://www.flaticon.com/svg/static/icons/svg/2933/2933449.svg" alt="">
+            <h2>livingroom</h2>
+            <a href="{% url 'gallery' %}"><button class="btn" >Gallery</button></a>
+        </div>
+        <div id="bedroom"  data-aos="fade-up">
+            <img src="https://www.flaticon.com/svg/static/icons/svg/489/489870.svg" alt="">
+            <h2>bedroom</h2>
+            <a href="{% url 'gallery' %}"><button class="btn" >Gallery</button></a>
+        </div>
+    </div>
+    </section>
+    <!--before end-->
+    <div id="before-end">
+
+        <img src="https://image.freepik.com/free-photo/white-wall-background_24836-89.jpg" alt="">
+        <div class="content-end" data-aos="fade-up"><h1>"We think people are at their best when they are <br> listening. So we design things that make<br> listening easier, more intuitive, and more<br> inspiring."</h1></div>
+    </div>
+    <!--contact-->
+    <section class="contact">
+    <div id="contact">
+        <div id="info" data-aos="fade-up">
+            <div id="inner-info">
+                <div id="address">
+                    <img src="https://www.flaticon.com/svg/static/icons/svg/1076/1076731.svg" alt="">
+                    <h3>Address</h3>
+                    <p>44/4 m.6 road chumsumpun <br> Bangkok 10530</p>                  
+                </div>
+                <div id="phone">
+                    <img src="https://www.flaticon.com/svg/static/icons/svg/1034/1034131.svg" alt=""> 
+                    <h3>Phone</h3>    
+                    <p>086-982-3017,063-946-0036</p>
+                </div>
+                <div id="email">
+                    <img src="https://www.flaticon.com/svg/static/icons/svg/1034/1034146.svg" alt="">  
+                    <h3>Email</h3>
+                    <p>mumin96303@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div id="email-form" data-aos="fade-up">
+            <div id="inner-email-form">
+                <h2>Contact Us</h2>
+                <!--contact-form-->
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div id="contact-form">
+                        <form>
+                            <div class="inputBox">
+                                <span>Full name</span>
+                                <input type="text" name="fullname">
+                                
+                            </div>
+                            <div class="inputBox">
+                                <span>Email</span>
+                                <input type="text" name="email">
+                                
+                            </div>
+                            <div class="inputBox">
+                                <span>Message</span>
+                                <textarea name="text-area"></textarea>
+                                
+                            </div>
+                            <div class="inputBox">
+                                <input type="submit">                   
+                            </div>                        
+                        </form>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!--footer-->
+    <div id="end">
+        <div class="icon">
+        <a href=""><i class="fa fa-facebook-square" style="font-size:36px"></i></a>
+        <a href=""><i class="fa fa-instagram" aria-hidden="true" style="font-size:36px"></i></a>
+        <a href=""><i class="fa fa-github" aria-hidden="true" style="font-size:36px"></i></a>
+        <p>copyright © 2020  By minstones</p>
+        </div>
+    </div>
+
+    <!--Script-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        window.addEventListener("scroll",function(){
+        let header = document.getElementById("navbar");
+        if(window.scrollY > 40){
+        header.classList.add("cus-nav");
+
+        }else{
+        header.classList.remove("cus-nav");
+        }
+        });
+    </script>
+    <script>
+        const toogle = document.getElementById('toggle');
+        const dropdown = document.getElementById('dropdown');
+
+        toggle.addEventListener('click',()=>{
+        dropdown.classList.toggle('show_1');
+        });
+    </script>
+</body>
+</html>
