@@ -348,7 +348,7 @@ body{
     justify-content: center;
     grid-gap: 5px;
     grid-row-gap: 0px;
-
+    padding: 30px;
 }
 .img img{
     width: 100%;
