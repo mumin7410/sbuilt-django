@@ -32,7 +32,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-
+LOGGING = { 'version': 1, 'disable_existing_loggers': False, 'handlers': { 'console': { 'class': 'logging.StreamHandler', }, }, 'loggers': 
 # Application definition
 
 
@@ -58,9 +58,8 @@ MIDDLEWARE = [
 ]
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
 
 ROOT_URLCONF = 'webapp.urls'
 
